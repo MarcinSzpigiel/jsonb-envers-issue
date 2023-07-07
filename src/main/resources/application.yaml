@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: admin
+    password: admin
+  jpa:
+    generate-ddl: false
+    properties:
+      org.hibernate.envers.revision_field_name: revision_id
+      org.hibernate.envers.revision_type_field_name: revision_type
+      org.hibernate.envers.store_data_at_delete: true
+      hibernate.jdbc.lob.non_contextual_creation: true
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+      hibernate.jdbc.batch_size: 50000
+      hibernate.jdbc.time_zone: UTC
